@@ -109,13 +109,13 @@ export const getUser = async (id: string) => {
 const onlyLoggedIn = () => {
     const cookieStore = cookies();
     const token = cookieStore.get('_r');
-    if (!token) redirect('/login');
+    if (!token) redirect('/');
 }
 
 const onlyGuest = () => {
     const cookieStore = cookies();
     const token = cookieStore.get('_r');
-    if (token) redirect('/');
+    if (token) redirect('/search');
 }
 
 const isLoggedIn = () => {

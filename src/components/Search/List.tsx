@@ -20,12 +20,12 @@ type SearchListProps = {
 const SearchList = ({ data }: SearchListProps) => {
 
     return (
-        <List>
+        <List className="flex flex-col gap-3">
             {data.length > 0 && data.map((item) => {
                 return (
-                    <Link key={item.id} href={item.url.replace('contents', 'articles')} style={{ cursor: 'pointer', color: 'unset', textDecoration: 'none' }}>
-                        <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start', fontFamily: 'Roboto' }}>
-                            <ListItemText primary={item.title} primaryTypographyProps={{ style: { fontSize: 20, fontWeight: 'bold', color: 'blue' } }} />
+                    <Link key={item.id} href={item.url.replace('contents', 'articles')}>
+                        <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start', fontFamily: 'Roboto' }} className="bg-white border-gray-200 border-2">
+                            <ListItemText primary={item.title} className="text-[#005b92]" primaryTypographyProps={{ style: { fontSize: 20, fontWeight: 'bold' } }} />
                             <div>
                                 {parse('<div>' + item.snippet + '</div>')}
                             </div>

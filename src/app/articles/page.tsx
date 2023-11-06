@@ -19,8 +19,10 @@ export default async function ArticlesPage({ searchParams: { query } }: { search
 
     return (<>
         <Header />
-        <div className="container font-sans">
-            <SearchList data={response.data.searchResults} />
-        </div>
+        <main className="bg-[#f6f6f6]">
+            <div className="container font-sans">
+                <SearchList data={response.data.searchResults} />
+            </div>
+        </main>
     </>)
 }
