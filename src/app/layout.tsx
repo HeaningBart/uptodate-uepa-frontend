@@ -32,7 +32,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script src="https://sdk.mercadopago.com/js/v2"></script>
+        <script async src="https://sdk.mercadopago.com/js/v2"></script>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
         <link href="https://www.wolterskluwer.com/-/media/project/wolterskluwer/oneweb/www/images/logo/favicon.png?rev=939e1a5cbc2d4c8ca7d3dfda28250865" rel="shortcut icon" />
