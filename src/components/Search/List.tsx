@@ -22,7 +22,6 @@ const SearchList = ({ data }: SearchListProps) => {
     return (
         <List>
             {data.length > 0 && data.map((item) => {
-                console.log(item)
                 return (
                     <Link key={item.id} href={item.url.replace('contents', 'articles')} style={{ cursor: 'pointer', color: 'unset', textDecoration: 'none' }}>
                         <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start', fontFamily: 'Roboto' }}>

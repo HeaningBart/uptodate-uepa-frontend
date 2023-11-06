@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import SearchList from '@/components/Search/List'
+import { checkStatus } from '@/services/server/auth'
 import { Metadata } from 'next'
 
 
@@ -12,6 +13,7 @@ export async function generateMetadata({ searchParams: { query } }: { searchPara
 }
 
 export default async function ArticlesPage({ searchParams: { query } }: { searchParams: { query: string } }) {
+    await checkStatus()
 
     const response = await (await fetch(`https://www.uptodate.com/services/app/contents/search/2/json?search=${query}&searchType=PLAIN_TEXT&language=en&max=100`)).json()
 

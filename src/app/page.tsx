@@ -1,6 +1,8 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Search from "@/components/Search";
+import { checkStatus, onlyLoggedIn } from "@/services/server/auth";
 import { Metadata } from "next";
+import SearchInput from "./search/components/search-input";
 
 
 export const metadata: Metadata = {
@@ -9,16 +11,18 @@ export const metadata: Metadata = {
 
 
 
-export default function Home() {
+export default async function Home() {
+
+  onlyLoggedIn()
+  await checkStatus()
 
   return (
     <>
       <Header />
-      <div className="container">
-        <div className="flex flex-col gap-3 min-h-[70vh] justify-center items-center">
-          <Search />
-        </div>
+      <div className="container my-5 min-h-[80vh] flex flex-col justify-center">
+        <SearchInput />
       </div>
+      <Footer />
     </>
   )
 }
