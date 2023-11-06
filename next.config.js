@@ -8,6 +8,11 @@ const nextConfig = {
           "https://www.uptodate.com/contents/images/:tag/:first/:second",
         permanent: true,
       },
+      {
+        source: "/contents/:tag",
+        destination: "/articles/:tag",
+        permanent: true,
+      },
     ];
   },
 };
