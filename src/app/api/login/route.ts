@@ -11,8 +11,8 @@ export async function GET(request: NextRequest) {
     cookieStore.set("_r", token, {
       maxAge: 30 * 24 * 60 * 60,
     });
-    redirect(process.env.NEXT_PUBLIC_WEBSITE_URL!);
+    redirect(`${process.env.NEXT_PUBLIC_WEBSITE_URL!}/auth?reload=true`);
   } else {
-    redirect(process.env.NEXT_PUBLIC_WEBSITE_URL!);
+    redirect(`${process.env.NEXT_PUBLIC_WEBSITE_URL!}/auth`);
   }
 }
