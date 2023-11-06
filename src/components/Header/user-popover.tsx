@@ -90,9 +90,9 @@ const UserPopover = () => {
                         </PopoverTrigger>
                         <PopoverContent className="p-0 font-roboto rounded-none">
                             <ul className="flex flex-col">
-                                {MenuItems.filter(item => item.allowed.includes(current_role)).map((item, index) => {
+                                {MenuItems.filter((item) => item.allowed.includes(current_role)).map((item, index) => {
                                     return (
-                                        <Link href={item.href} prefetch={false} className=" hover:bg-blue-200 transition-all">
+                                        <Link href={item.href} key={index} prefetch={false} className=" hover:bg-blue-200 transition-all">
                                             <li className="px-4 py-2 flex flex-row gap-2 items-center"><FontAwesomeIcon icon={item.icon} /> {item.title}</li>
                                         </Link>
                                     )
@@ -121,7 +121,7 @@ const UserPopover = () => {
                         <ul className="flex flex-col">
                             {MenuItems.filter(item => item.allowed.includes(current_role)).map((item, index) => {
                                 return (
-                                    <Link href={item.href} prefetch={false} className=" hover:bg-blue-200 transition-all">
+                                    <Link href={item.href} key={index} prefetch={false} className=" hover:bg-blue-200 transition-all">
                                         <li className="px-4 py-2 flex flex-row gap-2 items-center"><FontAwesomeIcon icon={item.icon} /> {item.title}</li>
                                     </Link>
                                 )
