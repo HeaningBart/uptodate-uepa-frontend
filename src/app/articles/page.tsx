@@ -19,6 +19,7 @@ export default async function ArticlesPage({ searchParams: { query } }: { search
     const response = await axios.get(`https://www.uptodate.com/services/app/contents/search/2/json?search=${query}&sp=0&searchType=PLAIN_TEXT&source=USER_PREF&searchControl=TOP_PULLDOWN&searchOffset=1&autoComplete=false&language=pt&max=10&index=&autoCompleteTerm=`)
 
 
+    console.log(response)
 
     return (<>
         <Header />
