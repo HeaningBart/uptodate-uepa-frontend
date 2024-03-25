@@ -24,7 +24,10 @@ const SearchList = ({ data }: SearchListProps) => {
       {data.length > 0 &&
         data.map((item) => {
           return (
-            <li className="bg-foreground border-border shadow-md rounded border-2 p-4">
+            <li
+              key={item.id}
+              className="bg-foreground border-border shadow-md rounded border-2 p-4"
+            >
               <Link
                 key={item.id}
                 href={item.url}
