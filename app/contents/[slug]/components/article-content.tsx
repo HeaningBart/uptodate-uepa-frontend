@@ -47,60 +47,59 @@ const ArticleContent = ({ article }: { article: UpToDateResponse }) => {
       >
         <FontAwesomeIcon icon={open ? faChevronLeft : faChevronRight} />
       </button>
-      <div className="flex">
-        <div id="utd-main" className="utd-content-main">
-          <div id="topicContainer" className="topicContainer">
-            <div
-              onClick={handleMobileClick}
-              id="topicOutline"
-              className="topicOutline bg-[white] dark:bg-[#101010] transition-all duration-300 group-data-[open='true']:translate-x-0 group-data-[open='false']:-translate-x-full fixed top-[70px]"
-            >
-              <div id="outlineContent">
-                {parse(article.data.outlineHtml, {
-                  replace: (domNode) => {
-                    if (
-                      domNode instanceof Element &&
-                      domNode.tagName === 'a' &&
-                      domNode.attribs['href'] &&
-                      domNode.attribs['href'].includes('contents/image')
-                    ) {
-                      return (
-                        <ImageModal href={domNode.attribs['href']}>
-                          <Link href={'#'} data-fetch={domNode.attribs['href']}>
-                            {(domNode.children[1] as Text).data}
-                          </Link>
-                        </ImageModal>
-                      )
-                    }
-                  },
-                })}
-              </div>
+
+      <div id="utd-main" className="utd-content-main">
+        <div id="topicContainer" className="topicContainer">
+          <div
+            onClick={handleMobileClick}
+            id="topicOutline"
+            className="topicOutline bg-[white] dark:bg-[#101010] transition-all duration-300 group-data-[open='true']:translate-x-0 group-data-[open='false']:-translate-x-full fixed top-[70px]"
+          >
+            <div id="outlineContent">
+              {parse(article.data.outlineHtml, {
+                replace: (domNode) => {
+                  if (
+                    domNode instanceof Element &&
+                    domNode.tagName === 'a' &&
+                    domNode.attribs['href'] &&
+                    domNode.attribs['href'].includes('contents/image')
+                  ) {
+                    return (
+                      <ImageModal href={domNode.attribs['href']}>
+                        <Link href={'#'} data-fetch={domNode.attribs['href']}>
+                          {(domNode.children[1] as Text).data}
+                        </Link>
+                      </ImageModal>
+                    )
+                  }
+                },
+              })}
             </div>
-            <div className="group-data-[open='true']:lg:pl-[360px] group-data-[open='false']:lg:pl-[0px] overflow-auto transition-all durantion-300 lg:pt-[70px] flex flex-col gap-2">
-              <div className="p-4 font-bold text-2xl text-primary text-center">
-                <h1>{article.data.topicInfo.title}</h1>
-              </div>
-              <article className="topicArticle text-primary group-data-[open='true']:group-data-[is-mobile='true']:invisible group-data-[open='false']:group-data-[is-mobile='true']:visible">
-                {parse(article.data.bodyHtml, {
-                  replace: (domNode) => {
-                    if (
-                      domNode instanceof Element &&
-                      domNode.tagName === 'a' &&
-                      domNode.attribs['href'] &&
-                      domNode.attribs['href'].includes('contents/image')
-                    ) {
-                      return (
-                        <ImageModal href={domNode.attribs['href']}>
-                          <Link href={'#'} data-fetch={domNode.attribs['href']}>
-                            {(domNode.children[0] as Text).data}
-                          </Link>
-                        </ImageModal>
-                      )
-                    }
-                  },
-                })}
-              </article>
+          </div>
+          <div className="group-data-[open='true']:lg:pl-[360px] group-data-[open='false']:lg:pl-[0px] overflow-auto transition-all durantion-300 lg:pt-[70px] flex flex-col gap-2">
+            <div className="p-4 font-bold text-2xl text-primary text-center">
+              <h1>{article.data.topicInfo.title}</h1>
             </div>
+            <article className="topicArticle text-primary group-data-[open='true']:group-data-[is-mobile='true']:invisible group-data-[open='false']:group-data-[is-mobile='true']:visible">
+              {parse(article.data.bodyHtml, {
+                replace: (domNode) => {
+                  if (
+                    domNode instanceof Element &&
+                    domNode.tagName === 'a' &&
+                    domNode.attribs['href'] &&
+                    domNode.attribs['href'].includes('contents/image')
+                  ) {
+                    return (
+                      <ImageModal href={domNode.attribs['href']}>
+                        <Link href={'#'} data-fetch={domNode.attribs['href']}>
+                          {(domNode.children[0] as Text).data}
+                        </Link>
+                      </ImageModal>
+                    )
+                  }
+                },
+              })}
+            </article>
           </div>
         </div>
       </div>
