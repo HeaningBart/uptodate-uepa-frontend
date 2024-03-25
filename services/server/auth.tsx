@@ -71,7 +71,7 @@ export const getUser = async (id: string) => {
     redirect('/login')
   }
   const url = new URL('/users/' + id, process.env.LOCAL_API_URL)
-  const users_data: { user: User } = await (
+  const users_data: User = await (
     await fetch(url, {
       headers: {
         Accept: 'application/json',

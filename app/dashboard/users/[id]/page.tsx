@@ -11,7 +11,7 @@ export async function generateMetadata({
   const user = await getUser(id)
 
   return {
-    title: `Editando ${user.user.email} - UpToDate do Pará`,
+    title: `Editando ${user.email} - UpToDate do Pará`,
   }
 }
 
@@ -23,7 +23,7 @@ const SingleUserPage = async ({
   const user = await getUser(id)
 
   return (
-    <ContextProvider user={user.user}>
+    <ContextProvider user={user}>
       <div className="min-h-screen container px-5 space-y-4">
         <UserProfileForm />
       </div>
