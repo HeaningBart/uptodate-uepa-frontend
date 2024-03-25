@@ -17,15 +17,30 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import API from '@/services/api'
+import { Token } from '@/lib/actions'
+import { useRouter } from 'next/navigation'
+
+const signUpRequest = async (data: { email: string; password: string }) => {
+  await API.post('/register', data)
+  const token = await logInRequest(data.email, data.password)
+  return token
+}
+
+const logInRequest = async (email: string, password: string) => {
+  const { token } = (
+    await API.post<{ token: Token }>('/login', {
+      email,
+      password,
+    })
+  ).data
+  return token
+}
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Insira um e-mail válido.' }),
-  username: z.string().min(2, {
-    message:
-      'Seu nome de usuário tem que ter pelo menos 2 caracteres e não pode ter espaços.',
-  }),
   password: z.string().min(6, {
     message:
       'Sua senha tem que ter no mínimo 6 caracteres e não pode ter espaços.',
@@ -37,17 +52,21 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
       email: '',
       password: '',
     },
   })
 
+  const router = useRouter()
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true)
-    toast('Um e-mail de boas-vindas com instruções foi enviado para você.', {
-      duration: 1000000,
-    })
+    const token = await signUpRequest(values)
+    toast.success(
+      `Você foi cadastrado com sucesso! Agora você pode fazer login.`
+    )
+    setIsLoading(false)
+    router.push('/api/login?token=' + token)
   }
 
   return (
@@ -55,21 +74,6 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="grid gap-2">
-            <div className="grid gap-1">
-              <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Nome de usuário</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Renorzinho" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
             <div className="grid gap-1">
               <FormField
                 control={form.control}

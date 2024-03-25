@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { redirect } from 'next/navigation'
 
 export async function middleware(request: NextRequest) {
   if (request.url.includes('contents') || request.url.endsWith('/')) {
@@ -16,7 +15,6 @@ export async function middleware(request: NextRequest) {
         },
       })
     ).json()
-
     if (user.user.authorizedUntil < new Date().toISOString()) {
       return NextResponse.redirect(new URL('/store', request.nextUrl))
     }
