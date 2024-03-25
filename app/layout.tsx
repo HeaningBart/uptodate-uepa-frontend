@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { Toaster } from 'sonner'
 import Provider from './ThemeProvider'
 import MercadoPago from '@/components/mercado-pago'
+import Header from '@/components/header'
 export default function RootLayout({
   children,
   image,
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className="h-full">
         <Provider>
           <MercadoPago />
+          <Header />
           <main>{children}</main>
           <Toaster />
           {image}

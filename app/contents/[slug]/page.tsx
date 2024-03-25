@@ -38,7 +38,6 @@ const ContentPage = async ({ params: { slug } }: RouteProps) => {
 
   return (
     <div className="flex flex-col">
-      <Header />
       <ArticleContent article={article} />
     </div>
   )

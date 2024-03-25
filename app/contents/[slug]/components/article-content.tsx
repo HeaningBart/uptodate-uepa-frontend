@@ -17,9 +17,27 @@ const ArticleContent = ({ article }: { article: UpToDateResponse }) => {
 
   useEffect(() => {
     if (window && window.innerWidth < 1024) {
+      console.log(window)
       setIsMobile(true)
     }
+    function resizeWindow() {
+      if (window.innerWidth < 1024) {
+        setIsMobile(true)
+      } else {
+        setIsMobile(false)
+      }
+    }
+    window.addEventListener('resize', resizeWindow)
+    return () => {
+      window.removeEventListener('resize', resizeWindow)
+    }
   }, [window])
+
+  function handleMobileClick() {
+    if (isMobile) {
+      setOpen(false)
+    }
+  }
 
   return (
     <div data-open={open} data-is-mobile={isMobile} className="group">
@@ -33,6 +51,7 @@ const ArticleContent = ({ article }: { article: UpToDateResponse }) => {
         <div id="utd-main" className="utd-content-main">
           <div id="topicContainer" className="topicContainer">
             <div
+              onClick={handleMobileClick}
               id="topicOutline"
               className="topicOutline bg-[white] dark:bg-[#101010] transition-all duration-300 group-data-[open='true']:translate-x-0 group-data-[open='false']:-translate-x-full fixed top-[70px]"
             >
@@ -57,12 +76,11 @@ const ArticleContent = ({ article }: { article: UpToDateResponse }) => {
                 })}
               </div>
             </div>
-
             <div className="group-data-[open='true']:lg:pl-[360px] group-data-[open='false']:lg:pl-[0px] overflow-auto transition-all durantion-300 lg:pt-[70px] flex flex-col gap-2">
               <div className="p-4 font-bold text-2xl text-primary text-center">
                 <h1>{article.data.topicInfo.title}</h1>
               </div>
-              <article className="topicArticle text-primary">
+              <article className="topicArticle text-primary group-data-[open='true']:group-data-[is-mobile='true']:invisible group-data-[open='false']:group-data-[is-mobile='true']:visible">
                 {parse(article.data.bodyHtml, {
                   replace: (domNode) => {
                     if (

@@ -1707,3 +1707,11 @@ ul ul  {
  top: 277px !important;  
   padding-top: 0px;  
 }  
+
+@media screen and (max-width: 768px) {  
+  #topicOutline {  
+    top: 70px !important;  
+    position: fixed
+  }  
+}
+
