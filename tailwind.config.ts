@@ -20,11 +20,7 @@ const config = {
         xl: '1140px',
         '2xl': '1320px',
       },
-      padding: {
-        xs: '1.25rem',
-        sm: '1.25rem',
-        md: '1.25rem',
-      },
+      padding: '1.25rem',
     },
     extend: {
       colors: {
