@@ -19,7 +19,6 @@ const Component = async () => {
 
   return (
     <>
-      <Header />
       <div className="flex flex-col min-h-[80vh] container py-8 gap-3 ">
         <Alert className="text-primary">
           <Terminal className="h-4 w-4 text-primary" />

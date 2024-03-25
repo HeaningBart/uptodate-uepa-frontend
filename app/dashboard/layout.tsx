@@ -8,7 +8,6 @@ export default async function DashboardLayout({
 }) {
   return (
     <>
-      <Header />
       <div className="relative">
         <div className="w-[256px] hidden lg:block min-h-[calc(100vh-64px)] bg-foreground p-4 shadow-md fixed">
           <ul className="p-2 text-primary text-sm font-bold divide-y-2">

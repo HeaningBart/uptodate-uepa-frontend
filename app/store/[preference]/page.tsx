@@ -22,7 +22,6 @@ const PreferencePage = async ({
   return (
     <>
       <div>
-        <Header />
         <MercadoPagoWallet preferenceId={preference} />
       </div>
     </>
