@@ -1,0 +1,2075 @@
+/* Reworked style for UpToDate core graphics based on Resonance input - Additions/Edits/Deletions/Organizations - LAST UPDATED: 02/28/2023 */
+
+/* Figure definition */
+.graphic {
+  border-collapse: collapse;
+}
+
+.graphic .figure {
+  font-size: 100%;
+  text-align: left;
+  font-family: Noto Sans, Verdana, sans-serif;
+  background-color: White;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---------- */
+
+/* Title definition */
+.graphic .ttl {
+  overflow-wrap: break-word;
+  word-break: normal;
+  line-height: 1.4em;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px .2em 16px 0;
+}
+
+/* ---------- */
+
+/* Title superscript definition */
+.graphic .ttl sup {
+  font-size: 11px;
+  letter-spacing: .5px;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: -7px;
+  padding: 0 .1em;
+}
+
+/* ---------- */
+
+/* Title subscript definition */
+.graphic .ttl sub {
+  font-size: 11px;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  bottom: -4px;
+}
+
+/* ---------- */
+
+/* Content definitions */
+.graphic .cntnt {
+  border: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.graphic .cntnt table {
+  width: 100%;
+}
+
+/* ---------- */
+
+
+/* Table definitions (including containers) */
+.graphic .figure table {
+  text-align: left;
+  border: 1px solid #BFBFBF;
+  border-top: none;
+  font-size: .75em;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.graphic .figure td {
+  vertical-align: text-top;
+  line-height: 1.5em;
+  border: 1px solid #BFBFBF;
+  font-size: 14px;
+  padding: .3em .6em;
+}
+
+.graphic .figure table.container {
+  border: none;
+}
+
+.graphic .figure table.container table {
+  text-align: left;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #BFBFBF;
+  border-collapse: collapse;
+}
+
+.graphic .figure td.container {
+  vertical-align: top;
+  border: none;
+  padding: 0 .25em;
+}
+
+/* ---------- */
+
+/* Legend/Footnotes/Source section definitions */
+.graphic .graphic_lgnd {
+  word-wrap: break-word;
+  line-height: 21px;
+  font-size: 14px;
+  text-align: left;
+  padding: 16px 0;
+  width: 96%;
+  border-bottom: 1px solid #BFBFBF;
+  border-top: none;
+}
+
+.graphic .graphic_footnotes {
+  word-wrap: break-word;
+  line-height: 21px;
+  font-size: 14px;
+  text-align: left;
+  padding: 16px 0;
+  width: 96%;
+  border-bottom: 1px solid #BFBFBF;
+  border-top: none;
+}
+
+.graphic .graphic_reference {
+  word-wrap: break-word;
+  line-height: 18px;
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  padding: 16px 0;
+  width: 96%;
+  border-bottom: 1px solid #BFBFBF;
+  border-top: none;
+  color: #757575;
+}
+
+/* ---------- */
+
+/* Legend/Footnotes/Source break tag definitions */
+.graphic .graphic_lgnd br {
+  content: " ";
+  display: block;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.graphic .graphic_footnotes br {
+  content: " ";
+  display: block;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.graphic .graphic_reference br {
+  content: " ";
+  display: block;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* ---------- */
+
+/* Footnote alignment definitions */
+.graphic .bullet {
+  padding-left: .1em;
+}
+
+.graphic .lozenge {
+  font-size: 14px;
+}
+
+.graphic .double_bullet {
+  padding-left: .2em;
+}
+
+.graphic .double_lozenge {
+  font-size: 14px;
+}
+
+/* ---------- */
+
+/* Strong/italic definitions */
+.graphic .figure strong {
+  font-weight: bold;
+}
+
+.graphic .figure strong.heading {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.8em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.graphic .figure em {
+  font-style: italic;
+}
+
+/* ---------- */
+
+/* Table superscript/subscript definitions */
+.graphic .figure td sup,
+sub {
+  position: relative;
+  font-size: .75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.graphic .figure td sup {
+  letter-spacing: .5px;
+  top: -.5em;
+  padding: 0 .1em;
+}
+
+.graphic .figure td sub {
+  bottom: -.4em;
+}
+
+/* ---------- */
+
+/* Table superscript/subscript definitions for subtitle1/subtitle2 classes */
+.graphic .figure td.subtitle1 sup,
+.graphic .figure td.subtitle1_left sup,
+.graphic .figure td.subtitle1_left_white sup,
+.graphic .figure td.subtitle1_single sup,
+.graphic .figure td.subtitle1_single_white sup,
+.graphic .figure td.subtitle1_white sup,
+.graphic .figure td.subtitle2 sup,
+.graphic .figure td.subtitle2_left sup,
+.graphic .figure td.subtitle2_left_white sup,
+.graphic .figure td.subtitle2_single sup,
+.graphic .figure td.subtitle2_single_white sup,
+.graphic .figure td.subtitle2_white sup {
+  position: relative;
+  font-size: .7em;
+  letter-spacing: .5px;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.graphic .figure td.subtitle1 sub,
+.graphic .figure td.subtitle1_left sub,
+.graphic .figure td.subtitle1_left_white sub,
+.graphic .figure td.subtitle1_single sub,
+.graphic .figure td.subtitle1_single_white sub,
+.graphic .figure td.subtitle1_white sub,
+.graphic .figure td.subtitle2 sub,
+.graphic .figure td.subtitle2_left sub,
+.graphic .figure td.subtitle2_left_white sub,
+.graphic .figure td.subtitle2_single sub,
+.graphic .figure td.subtitle2_single_white sub,
+.graphic .figure td.subtitle2_white sub {
+  position: relative;
+  font-size: .7em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.graphic .figure td.subtitle1 sup,
+.graphic .figure td.subtitle1_left sup,
+.graphic .figure td.subtitle1_left_white sup,
+.graphic .figure td.subtitle1_single sup,
+.graphic .figure td.subtitle1_single_white sup,
+.graphic .figure td.subtitle1_white sup {
+  letter-spacing: .5px;
+  top: -.7em;
+  padding: 0 .1em;
+}
+
+.graphic .figure td.subtitle2 sup,
+.graphic .figure td.subtitle2_left sup,
+.graphic .figure td.subtitle2_left_white sup,
+.graphic .figure td.subtitle2_single sup,
+.graphic .figure td.subtitle2_single_white sup,
+.graphic .figure td.subtitle2_white sup {
+  letter-spacing: .5px;
+  top: -.6em;
+  padding: 0 .1em;
+}
+
+/* ---------- */
+
+/* Legend superscript/subscript definitions */
+.graphic .graphic_lgnd sup,
+sub {
+  position: relative;
+  font-size: .75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.graphic .graphic_lgnd sup {
+  letter-spacing: .5px;
+  top: -.5em;
+  padding: 0 .1em;
+}
+
+.graphic .graphic_lgnd sub {
+  bottom: -.4em;
+}
+
+/* ---------- */
+
+/* Footnotes superscript/subscript definitions */
+.graphic .graphic_footnotes sup,
+sub {
+  position: relative;
+  font-size: .75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.graphic .graphic_footnotes sup {
+  letter-spacing: .5px;
+  top: -.5em;
+  padding: 0 .1em;
+}
+
+.graphic .graphic_footnotes sub {
+  bottom: -.4em;
+}
+
+/* ---------- */
+
+/* Source superscript/subscript definitions */
+.graphic .graphic_reference sup,
+sub {
+  position: relative;
+  font-size: .75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.graphic .graphic_reference sup {
+  letter-spacing: .5px;
+  top: -.5em;
+  padding: 0 .1em;
+}
+
+.graphic .graphic_reference sub {
+  bottom: -.4em;
+}
+
+/* ---------- */
+
+/* Small font definition */
+.graphic .small {
+  font-size: 12px;
+}
+
+/* ---------- */
+
+/* Font color definitions */
+.graphic .yellow {
+  color: #FFFF99;
+}
+
+.graphic .gray {
+  color: #E6E6E6;
+}
+
+.graphic .lght_gray {
+  color: #F6F6F6;
+}
+
+.graphic .green {
+  color: #85BC20;
+}
+
+.graphic .darkgreen {
+  color: #009881;
+}
+
+.graphic .lght_green {
+  color: #D4E8B1;
+}
+
+.graphic .lght_green_tint {
+  color: #E2EFD9;
+}
+
+.graphic .red {
+  color: #EC5862;
+}
+
+.graphic .lght_red {
+  color: #F6B1B6;
+}
+
+.graphic .orange {
+  color: #FED009;
+}
+
+.graphic .darkorange {
+  color: #EA8F00;
+}
+
+.graphic .lght_orange {
+  color: #F8D8A6;
+}
+
+.graphic .peach {
+  color: #FFE5B4;
+}
+
+.graphic .purple {
+  color: #DAAACE;
+}
+
+.graphic .darkpurple {
+  color: #940C72;
+}
+
+.graphic .seagreen {
+  color: #A6DBD3;
+}
+
+.graphic .lght_blue_text {
+  color: #E6F2F9;
+}
+
+.graphic .blue {
+  color: #007AC3;
+}
+
+.graphic .darkbluetint {
+  color: #B3AECA;
+}
+
+.graphic .blueHL {
+  color: #66CCFF;
+}
+
+.graphic .brown {
+  color: #AF6B00;
+}
+
+.graphic .white {
+  color: #FFFFFF;
+}
+
+/* ---------- */
+
+/* Link color definitions */
+.graphic .figure a:link {
+  color: #005B92;
+  text-decoration: none;
+}
+
+.graphic .figure a:hover {
+  color: #003D61;
+  text-decoration: underline;
+}
+
+.graphic .figure a:visited {
+  color: #005B92;
+  text-decoration: none;
+}
+
+/* ---------- */
+
+/* Image styling definitions */
+.graphic .cntnt img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.graphic .graphic_lgnd img,
+.cntnt table img {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+/* ---------- */
+
+/* LWW contract link definitions - These styles were added by the Web team */
+.graphic .figure .contractual a {
+  color: #336633;
+  background-color: #FFFFFF;
+  text-decoration: none;
+}
+
+.graphic .figure .contractual a:link {
+  color: #336633;
+  background-color: #FFFFFF;
+  text-decoration: none;
+}
+
+.graphic .figure .contractual a:visited {
+  color: #336633;
+  background-color: #FFFFFF;
+  text-decoration: none;
+}
+
+.graphic .figure .contractual a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- */
+
+/* Headings - Subtitle/center alignment definitions */
+.graphic td.subtitle1 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #E6E6E6;
+}
+
+.graphic td.subtitle2 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #F2F2F2;
+}
+
+.graphic td.subtitle3 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #F9F9F9;
+}
+
+.graphic td.subtitle4 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #FBFBFB;
+}
+
+.graphic td.subtitle5 {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #FEFEFE;
+}
+
+/* ---------- */
+
+/* Headings - Subtitle/single column table definitions */
+.graphic td.subtitle1_single {
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: .5em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #E6E6E6;
+}
+
+.graphic td.subtitle2_single {
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1.5em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #F2F2F2;
+}
+
+.graphic td.subtitle3_single {
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3.0em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #F9F9F9;
+}
+
+.graphic td.subtitle4_single {
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 4.5em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #FBFBFB;
+}
+
+.graphic td.subtitle5_single {
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #FEFEFE;
+}
+
+/* ---------- */
+
+/* Headings - Subtitle/left alignment definitions */
+.graphic td.subtitle1_left {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: .5em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #E6E6E6;
+}
+
+.graphic td.subtitle2_left {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #F2F2F2;
+}
+
+.graphic td.subtitle3_left {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #F9F9F9;
+}
+
+.graphic td.subtitle4_left {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3.5em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #FBFBFB;
+}
+
+.graphic td.subtitle5_left {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5em;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #FEFEFE;
+}
+
+/* ---------- */
+
+/* Headings - Subtitle/center alignment no background color definitions */
+.graphic td.subtitle1_white {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle2_white {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle3_white {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle4_white {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle5_white {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+/* ---------- */
+
+/* Headings - Subtitle/single column table no background color definitions */
+.graphic td.subtitle1_single_white {
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: .5em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle2_single_white {
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1.5em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle3_single_white {
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3.0em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle4_single_white {
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 4.5em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle5_single_white {
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+/* ---------- */
+
+/* Headings - Subtitle/left alignment no background color definitions */
+.graphic td.subtitle1_left_white {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: .5em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle2_left_white {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle3_left_white {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle4_left_white {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3.5em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.graphic td.subtitle5_left_white {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5em;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+/* ---------- */
+
+/* Headings - Subtitle3/left alignment with same indent as subtitle2_left to use if subtitle2 used in top level headers definitions */
+.graphic td.subtitle3_left_align {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+  background-color: #F9F9F9;
+}
+
+.graphic td.subtitle3_left_align_white {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+/* ---------- */
+
+/* Sublist start style definitions */
+.graphic td.sublist1_start {
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist2_start {
+  padding-left: 2em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist3_start {
+  padding-left: 3.5em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist4_start {
+  padding-left: 5em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist5_start {
+  padding-left: 6.5em;
+  padding-bottom: .3em;
+}
+
+/* ---------- */
+
+/* Sublist style definitions */
+.graphic td.sublist1 {
+  font-size: 14px;
+  padding-left: 2em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist2 {
+  font-size: 14px;
+  padding-left: 3.5em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist3 {
+  font-size: 14px;
+  padding-left: 5em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist4 {
+  font-size: 14px;
+  padding-left: 6.5em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist5 {
+  font-size: 14px;
+  padding-left: 8em;
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist6 {
+  font-size: 14px;
+  padding-left: 9.5em;
+  padding-bottom: .3em;
+}
+
+/* ---------- */
+
+/* Sublist other style definitions */
+.graphic td.sublist_other_start {
+  padding-bottom: .3em;
+}
+
+.graphic td.sublist_other {
+  font-size: 14px;
+  padding-left: .67em;
+  padding-bottom: .3em;
+}
+
+/* ---------- */
+
+/* Sublist other centered style definitions */
+.graphic .sublist_other_start_centered {
+  padding-bottom: .3em;
+  text-align: center;
+}
+
+.graphic .sublist_other_centered {
+  font-size: 14px;
+  padding: .3em .67em .3em .67em;
+  text-align: center;
+}
+
+/* ---------- */
+
+/* Centering text definition */
+.graphic .centered {
+  text-align: center;
+}
+
+/* ---------- */
+
+/* Indent style definitions */
+.graphic td.indent1 {
+  padding-left: 2em;
+}
+
+.graphic td.indent2 {
+  padding-left: 3.5em;
+}
+
+.graphic td.indent3 {
+  padding-left: 5em;
+}
+
+.graphic td.indent4 {
+  padding-left: 6.5em;
+}
+
+.graphic td.indent5 {
+  padding-left: 8em;
+}
+
+/* ---------- */
+
+/* Text alignment definitions */
+.graphic .figure .align_right {
+  text-align: right;
+}
+
+.graphic .figure .align_top {
+  vertical-align: top;
+}
+
+.graphic .figure .align_middle {
+  vertical-align: middle;
+}
+
+.graphic .figure .align_bottom {
+  vertical-align: bottom;
+}
+
+/* ---------- */
+
+/* Unordered list (ul) definitions */
+.graphic .figure td ul {
+  list-style-type: square;
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.graphic .figure td ul ul {
+  list-style-type: disc;
+  padding-left: 1.7em;
+}
+
+.graphic .figure td ul ul ul {
+  list-style-type: circle;
+}
+
+.graphic .figure td ul ul ul ul {
+  list-style-type: square;
+}
+
+.graphic .figure td ul ul ul ul ul {
+  list-style-type: disc;
+}
+
+/* ---------- */
+
+/* Unordered list (ul) - second/third level (if on their own row and not in a cell) list definitions */
+.graphic .figure ul.list_second_level {
+  list-style-type: disc;
+}
+
+.graphic .figure ul.list_third_level {
+  list-style-type: circle;
+}
+
+/* ---------- */
+
+/* Ordered list (ol) style type definitions */
+.graphic .figure ol.list_upper_alpha {
+  list-style-type: upper-alpha;
+}
+
+.graphic .figure ol.list_lower_alpha {
+  list-style-type: lower-alpha;
+}
+
+.graphic .figure ol.list_upper_roman {
+  list-style-type: upper-roman;
+}
+
+.graphic .figure ol.list_lower_roman {
+  list-style-type: lower-roman;
+}
+
+/* ---------- */
+
+/* Unordered list (ul), ordered list (ol), and (li) list style type none definitions */
+.graphic .figure ul.none {
+  list-style-type: none;
+}
+
+.graphic .figure ol.none {
+  list-style-type: none;
+}
+
+.graphic .figure li.none {
+  list-style-type: none;
+}
+
+/* ---------- */
+
+/* Unordered list (ul) indent definition */
+.graphic .figure td ul.decimal_heading {
+  margin-left: 1em;
+}
+
+/* ---------- */
+
+/* Ordered list (ol) if their is a heading definition */
+.graphic .figure td ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 2.85em;
+}
+
+/* ---------- */
+
+/* Ordered list (ol) if the numbers are 1-99 with no heading definition */
+.graphic .figure ol.numbers_no_heading {
+  padding-left: 2.25em;
+}
+
+/* ---------- */
+
+/* Ordered list (ol) if the numbers are 1-9 only with no heading definition */
+.graphic .figure td ol.numbers_to_nine {
+  padding-left: 1.75em;
+}
+
+/* ---------- */
+
+/* List (li) definitions */
+.graphic .figure td ol li {
+  list-style-position: outside;
+  margin-top: .2em;
+  margin-bottom: .2em;
+  padding-left: .2em;
+}
+
+.graphic .figure td li {
+  list-style-position: outside;
+  margin-top: .2em;
+  margin-bottom: .2em;
+  padding: 0;
+}
+
+/* ---------- */
+
+/* Legend/unordered list (ul) definitions */
+.graphic .graphic_lgnd ul {
+  list-style-type: square;
+  list-style-position: outside;
+  line-height: 1.5em;
+  margin: 0;
+  padding-left: 1.5em;
+  display: block;
+  zoom: 1;
+}
+
+.graphic .graphic_lgnd ul ul {
+  list-style-type: disc;
+  padding-left: 1.7em;
+}
+
+.graphic .graphic_lgnd ul ul ul {
+  list-style-type: circle;
+}
+
+.graphic .graphic_lgnd ul ul ul ul {
+  list-style-type: square;
+}
+
+.graphic .graphic_lgnd ul ul ul ul ul {
+  list-style-type: disc;
+}
+
+/* ---------- */
+
+/* Legend/unordered list (ul) indent definition */
+.graphic .graphic_lgnd ul.decimal_heading {
+  margin-left: 1em;
+}
+
+/* ---------- */
+
+/* Legend/unordered list (ul) li definition */
+.graphic .graphic_lgnd ul li {
+  list-style-position: outside;
+}
+
+/* ---------- */
+
+/* Legend/ordered list (ol) definition */
+.graphic .graphic_lgnd ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  line-height: 1.5em;
+  margin: 0;
+  padding-left: 2.85em;
+  display: block;
+  zoom: 1;
+}
+
+/* ---------- */
+
+/* Legend/ordered list (ol) if the numbers are 1-9 only with no heading definition */
+.graphic .graphic_lgnd ol.numbers_to_nine {
+  padding-left: 1.75em;
+}
+
+/* ---------- */
+
+/* Legend/ordered list (ol) li definition */
+.graphic .graphic_lgnd ol li {
+  list-style-position: outside;
+  display: list-item;
+  padding-left: .2em;
+}
+
+/* ---------- */
+
+/* Footnotes/unordered list (ul) definitions */
+.graphic .graphic_footnotes ul {
+  list-style-type: square;
+  list-style-position: outside;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1.5em;
+  padding-left: 1.5em;
+  display: block;
+  zoom: 1;
+}
+
+.graphic .graphic_footnotes ul ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.7em;
+}
+
+.graphic .graphic_footnotes ul ul ul {
+  list-style-type: circle;
+}
+
+.graphic .graphic_footnotes ul ul ul ul {
+  list-style-type: square;
+}
+
+.graphic .graphic_footnotes ul ul ul ul ul {
+  list-style-type: disc;
+}
+
+/* ---------- */
+
+/* Footnotes/unordered list (ul) for double footnote symbol definition */
+.graphic .graphic_footnotes ul.double_footnote_list {
+  margin-left: 2em;
+}
+
+/* ---------- */
+
+/* Footnotes/unordered list (ul) li definition */
+.graphic .graphic_footnotes ul li {
+  list-style-position: outside;
+}
+
+/* ---------- */
+
+/* Footnotes/ordered list (ol) definition */
+.graphic .graphic_footnotes ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  display: block;
+  line-height: 1.5em;
+  margin: 0;
+  padding-left: 2.85em;
+  zoom: 1;
+}
+
+/* ---------- */
+
+/* Footnotes/ordered list (ol) for double footnote symbol definition */
+.graphic .graphic_footnotes ol.double_footnote_list {
+  padding-left: 3.3em;
+}
+
+/* ---------- */
+
+/* Footnotes/ordered list (ol) li definition */
+.graphic .graphic_footnotes ol li {
+  list-style-position: outside;
+  display: list-item;
+  padding-left: .2em;
+}
+
+/* ---------- */
+
+/* Source/unordered list (ul) definitions */
+.graphic .graphic_reference ul {
+  list-style-type: square;
+  list-style-position: outside;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1.5em;
+  padding-left: 1.5em;
+  display: block;
+  zoom: 1;
+}
+
+.graphic .graphic_reference ul ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.7em;
+}
+
+.graphic .graphic_reference ul ul ul {
+  list-style-type: circle;
+}
+
+.graphic .graphic_reference ul ul ul ul {
+  list-style-type: square;
+}
+
+.graphic .graphic_reference ul ul ul ul ul {
+  list-style-type: disc;
+}
+
+/* ---------- */
+
+/* Source/ordered list (ol) definition */
+.graphic .graphic_reference ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  line-height: 1.5em;
+  margin: 0;
+  padding-left: 3em;
+  display: block;
+  zoom: 1;
+}
+
+/* ---------- */
+
+/* Source/ordered (ol) and unordered (ul) list li definitions */
+.graphic .graphic_reference ol li {
+  list-style-position: outside;
+  display: list-item;
+}
+
+.graphic .graphic_reference ul li {
+  list-style-position: outside;
+}
+
+/* ---------- */
+
+/* HR style definitions */
+.graphic .figure td hr {
+  height: 1px;
+  border-width: 0;
+  border-bottom: 1px solid #BFBFBF;
+  margin: .2em 0;
+}
+
+.graphic .graphic_lgnd hr {
+  word-wrap: break-word;
+  border-bottom: 1px solid #BFBFBF;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 16px 0;
+}
+
+.graphic .graphic_footnotes hr {
+  word-wrap: break-word;
+  border-bottom: 1px solid #BFBFBF;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 16px 0;
+}
+
+.graphic .graphic_reference hr {
+  word-wrap: break-word;
+  border-bottom: 1px solid #BFBFBF;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 16px 0;
+}
+
+/* ---------- */
+
+/* Legend/Footnotes/Source P style definitions */
+.graphic .graphic_lgnd p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.graphic .graphic_footnotes p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.graphic .graphic_reference p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* ---------- */
+
+/* Table p style definition */
+.graphic .figure td p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* ---------- */
+
+/* Table p indent style definitions */
+.graphic .figure p.indent1 {
+  padding-left: 1.5em;
+}
+
+.graphic .figure p.indent2 {
+  padding-left: 3em;
+}
+
+.graphic .figure p.indent3 {
+  padding-left: 4.5em;
+}
+
+.graphic .figure p.indent4 {
+  padding-left: 6em;
+}
+
+.graphic .figure p.indent5 {
+  padding-left: 7.5em;
+}
+
+/* ---------- */
+
+/* P extra top/bottom margin definitions */
+.graphic .figure p.extra_spacing_top {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.graphic .figure p.extra_spacing_bottom {
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.graphic .figure p.extra_spacing {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+/* ---------- */
+
+/* Table p centering definitions */
+.graphic .figure td p.centered {
+  text-align: center;
+}
+
+.graphic .figure td p.sublist_other_start_centered {
+  padding-bottom: .3em;
+  text-align: center;
+}
+
+.graphic .figure td p.sublist_other_centered {
+  font-size: 14px;
+  padding: .3em .67em .3em .67em;
+  text-align: center;
+}
+
+/* ---------- */
+
+/* Table p sublist style start definitions */
+.graphic .figure td p.sublist1_start {
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist2_start {
+  padding-left: 1.5em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist3_start {
+  padding-left: 3em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist4_start {
+  padding-left: 4.5em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist5_start {
+  padding-left: 6em;
+  padding-bottom: .3em;
+}
+
+/* ---------- */
+
+/* Table p sublist style definitions */
+.graphic .figure td p.sublist1 {
+  font-size: 14px;
+  padding-left: 1.5em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist2 {
+  font-size: 14px;
+  padding-left: 3em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist3 {
+  font-size: 14px;
+  padding-left: 4.5em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist4 {
+  font-size: 14px;
+  padding-left: 6em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist5 {
+  font-size: 14px;
+  padding-left: 7.5em;
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist6 {
+  font-size: 14px;
+  padding-left: 9em;
+  padding-bottom: .3em;
+}
+
+/* ---------- */
+
+/* Table p sublist other style definitions */
+.graphic .figure td p.sublist_other_start {
+  padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist_other {
+  font-size: 14px;
+  padding-bottom: .3em;
+}
+
+/* ---------- */
+
+/* Space style definition */
+.graphic td.space {
+  padding: 0;
+}
+
+/* ---------- */
+
+/* Checkmark style definitions */
+.graphic .large_checkmark {
+  font-size: 22px;
+  vertical-align: middle;
+}
+
+.graphic .small_checkmark {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* ---------- */
+
+/* Arrow style definition */
+.graphic .arrow {
+  font-size: 18px;
+  font-family: 'Calibri', 'sans-serif', Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+  vertical-align: middle;
+}
+
+/* ---------- */
+
+/* Whitespace nowrap definition */
+.graphic .nowrap_whitespace {
+  white-space: nowrap;
+}
+
+/* ---------- */
+
+/* Zebra-striping definition */
+.graphic table.zebra_stripes tr:nth-child(odd) {
+  background-color: #E6E6E6;
+}
+
+/* ---------- */
+
+/* Row background color style definitions */
+.graphic .highlight_yellow_text {
+  background-color: #FFFF99;
+}
+
+.graphic .highlight_gray_text {
+  background-color: #E6E6E6;
+}
+
+.graphic .highlight_sub2_gray_text {
+  background-color: #F2F2F2;
+}
+
+.graphic .highlight_sub3_gray_text {
+  background-color: #F9F9F9;
+}
+
+.graphic .highlight_sub4_gray_text {
+  background-color: #FBFBFB;
+}
+
+.graphic .highlight_sub5_gray_text {
+  background-color: #FEFEFE;
+}
+
+.graphic .highlight_lght_gray_text {
+  background-color: #F6F6F6;
+}
+
+.graphic .highlight_green_text {
+  background-color: #85BC20;
+}
+
+.graphic .highlight_darkgreen_text {
+  background-color: #009881;
+}
+
+.graphic .highlight_lght_green_text {
+  background-color: #D4E8B1;
+}
+
+.graphic .highlight_lght_green_tint_text {
+  background-color: #E2EFD9;
+}
+
+.graphic .highlight_red_text {
+  background-color: #EC5862;
+}
+
+.graphic .highlight_lght_red_text {
+  background-color: #F6B1B6;
+}
+
+.graphic .highlight_orange_text {
+  background-color: #FED009;
+}
+
+.graphic .highlight_darkorange_text {
+  background-color: #EA8F00;
+}
+
+.graphic .highlight_lght_orange_text {
+  background-color: #F8D8A6;
+}
+
+.graphic .highlight_peach_text {
+  background-color: #FFE5B4;
+}
+
+.graphic .highlight_purple_text {
+  background-color: #DAAACE;
+}
+
+.graphic .highlight_darkpurple_text {
+  background-color: #940C72;
+}
+
+.graphic .highlight_seagreen_text {
+  background-color: #A6DBD3;
+}
+
+.graphic .highlight_blue_text {
+  background-color: #E6F2F9;
+}
+
+.graphic .highlight_darkblue_text {
+  background-color: #007AC3;
+}
+
+.graphic .highlight_darkbluetint_text {
+  background-color: #B3AECA;
+}
+
+.graphic .highlight_blueHL_text {
+  background-color: #66CCFF;
+}
+
+.graphic .highlight_brown_text {
+  background-color: #AF6B00;
+}
+
+.graphic .highlight_black_text {
+  background-color: #000000;
+}
+
+/* ---------- */
+
+/* Divider bottom and top style definitions (divider top no longer used in new CSS) */
+.graphic .divider_bottom td {
+  border-bottom: 1px solid #757575;
+}
+
+.graphic .divider_top td {
+  border-top: 1px solid #757575;
+}
+
+.graphic td.divider_bottom {
+  border-bottom: 1px solid #757575;
+}
+
+.graphic td.divider_top {
+  border-top: 1px solid #757575;
+}
+
+/* ---------- */
+
+/* White border style definitions */
+.graphic .figure .border_right_white {
+  border-right: 1px solid #FFFFFF;
+}
+
+.graphic .figure .border_left_white {
+  border-left: 2px solid #FFFFFF;
+}
+
+.graphic .figure .border_bottom_white td {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.graphic .figure td.border_bottom_white {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* ---------- */
+
+/* Thick border style definitions */
+.graphic .figure .border_right_thick {
+  border-right: 2px solid #757575;
+}
+
+.graphic .figure .border_left_thick {
+  border-left: 2px solid #757575;
+}
+
+.graphic .figure .border_bottom_thick td {
+  border-bottom: 2px solid #757575;
+}
+
+.graphic .figure td.border_bottom_thick {
+  border-bottom: 2px solid #757575;
+}
+
+/* ---------- */
+
+/* Checkbox legend key style definition */
+.graphic .primarybox_key {
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: .15em;
+  margin-right: .5em;
+  padding-right: .8em;
+  border: 1px solid Black;
+  overflow: hidden;
+  float: left;
+  clear: both;
+}
+
+/* ---------- */
+
+/* Checkbox centered style definition */
+.graphic .primarybox_center {
+  font-size: .75em;
+  line-height: 2em;
+  margin-top: .25em;
+  padding: 0 .5em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: none;
+  clear: both;
+  vertical-align: top;
+}
+
+/* ---------- */
+
+/* Checkbox with checkmark style definitions */
+.graphic .primarybox_center_checkmark {
+  font-size: .75em;
+  line-height: 2em;
+  margin-top: .25em;
+  padding: .04em .3em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: none;
+  clear: both;
+  vertical-align: top;
+}
+
+.graphic .primarybox_right_checkmark {
+  font-size: .75em;
+  line-height: 1em;
+  margin-top: .25em;
+  margin-left: .5em;
+  padding: .2em .28em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: right;
+  clear: both;
+}
+
+.graphic .primarybox_left_checkmark {
+  font-size: .75em;
+  line-height: 1em;
+  margin-top: .25em;
+  margin-right: .5em;
+  padding: .2em .28em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: left;
+  clear: both;
+}
+
+/* ---------- */
+
+/* Checkbox right/left alignment style definitions (secondarybox no longer used in new CSS) */
+.graphic .primarybox_right {
+  font-size: .75em;
+  line-height: 1.4em;
+  margin-top: .25em;
+  margin-left: .5em;
+  padding: 0 .5em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: right;
+  clear: both;
+}
+
+.graphic .primarybox_left {
+  font-size: .75em;
+  line-height: 1.4em;
+  margin-top: .25em;
+  margin-right: .5em;
+  padding: 0 .5em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: left;
+  clear: both;
+}
+
+.graphic .secondarybox_right {
+  font-size: .75em;
+  line-height: 1em;
+  margin-top: .25em;
+  margin-right: .2em;
+  margin-left: .5em;
+  padding-left: .8em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: right;
+  clear: both;
+}
+
+.graphic .secondarybox_left {
+  font-size: .75em;
+  line-height: 1em;
+  margin-top: .25em;
+  margin-right: .5em;
+  margin-left: .2em;
+  padding-right: .8em;
+  border-top: 1px solid Black;
+  border-right: 2px solid Black;
+  border-bottom: 2px solid Black;
+  border-left: 1px solid Black;
+  background-color: White;
+  overflow: hidden;
+  float: left;
+  clear: both;
+}
+
+/* ---------- */
+
+/* Resonance requested copyright style definitions */
+#graphicVersion {
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 16px;
+  color: #757575;
+}
+
+.copyright {
+  font-size: 12px;
+  line-height: 18px;
+  color: #757575;
+}
+
+.graphic__copyright {
+  font-size: 12px;
+  line-height: 18px;
+  color: #757575;
+}
+
+/* ---------- */
+
+/* Resonance requested videoplayer style definition */
+.videoplayer {
+  margin-bottom: 16px;
+}
+
+/* ---------- */
+
+/* ---------- */
+
+/* Backwards compatible code */
+/* Old Legend/Reference/Footnote sections that works with preexisting HTML code */
+.lgnd {
+  word-wrap: break-word;
+  font-size: .85em;
+  text-align: left;
+  padding: .5em .2em 1em .2em;
+}
+
+.reference {
+  word-wrap: break-word;
+  font-size: .85em;
+  font-style: italic;
+}
+
+.footnotes {
+  word-wrap: break-word;
+  font-size: .85em;
+}
+
+/* ---------- */
+
+/* Old Legend/Reference/Footnote ul/ol that works with preexisting HTML code */
+.lgnd ul {
+  margin: 0 0 0 0;
+  padding: 0 0 0 1.8em;
+  list-style-position: outside;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.lgnd ol {
+  margin: 0 0 0 0;
+  padding: 0 0 0 2.5em;
+  list-style-position: outside;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.lgnd ol li {
+  list-style-type: decimal;
+  display: list-item;
+}
+
+.lgnd ul li {
+  list-style-type: disc;
+  display: list-item;
+}
+
+.footnotes ul {
+  margin: 0 0 0 0;
+  padding: 0 0 0 2.1em;
+  list-style-position: outside;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.footnotes ol {
+  margin: 0 0 0 0;
+  padding: 0 0 0 2.8em;
+  list-style-position: outside;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.footnotes ol li {
+  list-style-type: decimal;
+  display: list-item;
+}
+
+.footnotes ul li {
+  list-style-type: disc;
+  display: list-item;
+}
+
+.reference ul {
+  margin: 0 0 0 0;
+  padding: 0 0 0 2.1em;
+  list-style-position: outside;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.reference ol {
+  margin: 0 0 0 0;
+  padding: 0 0 0 2.8em;
+  list-style-position: outside;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.reference ol li {
+  list-style-type: decimal;
+  display: list-item;
+}
+
+.reference ul li {
+  list-style-type: disc;
+  display: list-item;
+}
+
+/* ---------- */
+
+/* Img code that works with preexisting HTML code */
+.lgnd img,
+.cntnt table img {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+/* ---------- */
+/* ---------- */
+
+/* New styles added for Resonance */
+/* remove border on table containers */
+.graphic table.container {
+  border-top: none;
+  border-bottom: none;
+}
+
+/* ---------- */
+
+/* Remove top border on tables that are just containers of other tables */
+.cntnt>.graphic>.figure>table.container>tr:first-child>td,
+.graphic>.figure>.cntnt>table.container>tr:first-child>td {
+  border-top: none;
+}
+
+/* ---------- */
+
+/* Remove bottom border on tables that are just containers of other tables */
+.cntnt>.graphic>.figure>table.container tr:last-child>td,
+.graphic>.figure>.cntnt>table.container tr:last-child>td {
+  border-bottom: none;
+}
+
+/* ---------- */
+
+/* adjust padding */
+.graphic__modal .utd-modal-content .single-graphic-content>.graphic>.figure>.ttl {
+  padding-top: 16px;
+}
+
+/* ---------- */
+
+/******* Should these be done in UTD CSS instead of graphic CSS? ********/
+.ds1-mt-4 {
+  margin-top: 16px;
+}
+
+/* ---------- */
+/* ---------- */
