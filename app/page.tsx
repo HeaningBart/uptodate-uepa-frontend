@@ -12,17 +12,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <Header />
-      <div className="min-h-[80vh] container flex flex-col items-center justify-center">
-        <form className="w-full" action="/contents/search">
-          <Input
-            name="search"
-            className="bg-[#f1f1f1] dark:bg-[#101010]"
-            placeholder="Pesquise por um artigo aqui..."
-          />
-        </form>
-      </div>
-    </main>
+    <div className="min-h-[80vh] container flex flex-col items-center justify-center">
+      <form className="w-full" action="/contents/search">
+        <Input
+          name="search"
+          className="bg-[#f1f1f1] dark:bg-[#101010]"
+          placeholder="Pesquise por um artigo aqui..."
+        />
+      </form>
+    </div>
   )
 }
